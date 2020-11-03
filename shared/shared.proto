@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "opencv_raspberry_test.shared";
+
+
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns ( stream HelloReply) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+}
+
+// The response message containing the greetings
+message HelloReply {
+}
