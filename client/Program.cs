@@ -28,7 +28,7 @@ namespace opencv_raspberry_test.client
             var client = new shared.Greeter.GreeterClient(channel);
 
             var stream = client.SayHello(new());
-            using var capture = new VideoCapture("alone_hd.mp4");
+            using var capture = new VideoCapture("alone_low.mp4");
             using (var window = new Window("capture"))
             {
                 while (stream.ResponseStream.MoveNext().Result)
