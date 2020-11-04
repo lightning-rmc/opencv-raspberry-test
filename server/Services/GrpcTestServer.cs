@@ -15,12 +15,13 @@ namespace opencv_raspberry_test.server.Services
         }
         public override async Task SayHello(HelloRequest request, IServerStreamWriter<HelloReply> responseStream, ServerCallContext context)
         {
-            while (true)
+            while (!context.CancellationToken.IsCancellationRequested)
             {
                 logger.LogInformation("next");
                 await responseStream.WriteAsync(new());
                 await Task.Delay(1_000/120);
             }
+            logger.LogInformation("Killed");
         }
     }
 }
