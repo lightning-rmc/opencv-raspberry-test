@@ -16,21 +16,21 @@ namespace opencv_raspberry_test.client
             // {
             //     Cv2.WaitKey();
             // }
-            var httpHandler = new HttpClientHandler();
-            // Return `true` to allow certificates that are untrusted/invalid
-            httpHandler.ServerCertificateCustomValidationCallback =
+            try
+            {
+                var httpHandler = new HttpClientHandler();
+                // Return `true` to allow certificates that are untrusted/invalid
+                httpHandler.ServerCertificateCustomValidationCallback =
                 HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
 
 
-            var channel = GrpcChannel.ForAddress("https://10.0.0.11:5001", 
-                                            new() { HttpHandler = httpHandler});
+                var channel = GrpcChannel.ForAddress("https://10.0.0.11:5001",
+                new() { HttpHandler = httpHandler});
 
-            var client = new shared.Greeter.GreeterClient(channel);
+                var client = new shared.Greeter.GreeterClient(channel);
 
-            var stream = client.SayHello(new());
-            using var capture = new VideoCapture("alone_low.mp4");
-            try
-            {
+                var stream = client.SayHello(new());
+                using var capture = new VideoCapture("alone_low.mp4");
                 using (var window = new Window("capture"))
                 {
                     while (stream.ResponseStream.MoveNext().Result)
