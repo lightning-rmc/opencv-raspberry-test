@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "opencv-raspberry-test.share
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "opencv-raspberry-test.server", "server\opencv-raspberry-test.server.csproj", "{D4661A27-E4B6-4662-B512-CE58100A8F71}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{BAAF71DD-6FDB-453A-B875-91C6148DD2EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{D4661A27-E4B6-4662-B512-CE58100A8F71}.Release|x64.Build.0 = Release|Any CPU
 		{D4661A27-E4B6-4662-B512-CE58100A8F71}.Release|x86.ActiveCfg = Release|Any CPU
 		{D4661A27-E4B6-4662-B512-CE58100A8F71}.Release|x86.Build.0 = Release|Any CPU
+		{BAAF71DD-6FDB-453A-B875-91C6148DD2EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAAF71DD-6FDB-453A-B875-91C6148DD2EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAAF71DD-6FDB-453A-B875-91C6148DD2EA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BAAF71DD-6FDB-453A-B875-91C6148DD2EA}.Debug|x64.Build.0 = Debug|Any CPU
+		{BAAF71DD-6FDB-453A-B875-91C6148DD2EA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BAAF71DD-6FDB-453A-B875-91C6148DD2EA}.Debug|x86.Build.0 = Debug|Any CPU
+		{BAAF71DD-6FDB-453A-B875-91C6148DD2EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAAF71DD-6FDB-453A-B875-91C6148DD2EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAAF71DD-6FDB-453A-B875-91C6148DD2EA}.Release|x64.ActiveCfg = Release|Any CPU
+		{BAAF71DD-6FDB-453A-B875-91C6148DD2EA}.Release|x64.Build.0 = Release|Any CPU
+		{BAAF71DD-6FDB-453A-B875-91C6148DD2EA}.Release|x86.ActiveCfg = Release|Any CPU
+		{BAAF71DD-6FDB-453A-B875-91C6148DD2EA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

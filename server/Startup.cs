@@ -29,6 +29,7 @@ namespace openc_vraspberry_test.server
         {
             services.AddGrpc();
             services.AddControllers();
+            services.AddSingleton<SpeedService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "server", Version = "v1" });
