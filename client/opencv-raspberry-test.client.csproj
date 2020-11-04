@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <None Update="Alone_hd.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Alone_low.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
