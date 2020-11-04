@@ -29,24 +29,34 @@ namespace opencv_raspberry_test.client
 
             var stream = client.SayHello(new());
             using var capture = new VideoCapture("alone_low.mp4");
-            using (var window = new Window("capture"))
+            try
             {
-                while (stream.ResponseStream.MoveNext().Result)
+                using (var window = new Window("capture"))
                 {
+                    while (stream.ResponseStream.MoveNext().Result)
+                    {
 
-                    // Frame image buffer
-                    var image = new Mat();
+                        // Frame image buffer
+                        var image = new Mat();
 
 
-                    capture.Read(image); // same as cvQueryFrame
-                    if (image.Empty())
-                        break;
+                        capture.Read(image); // same as cvQueryFrame
+                        if (image.Empty())
+                            break;
 
-                    window.ShowImage(image);
-                    Cv2.WaitKey(1);
+                        window.ShowImage(image);
+                        Cv2.WaitKey(1);
 
+                    }
                 }
             }
+            catch (System.Exception e)
+            {
+                System.Console.WriteLine(e);
+
+                throw;
+            }
+            
             // Console.ReadKey();
         }
     }
