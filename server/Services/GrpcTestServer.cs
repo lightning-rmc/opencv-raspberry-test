@@ -17,6 +17,8 @@ namespace opencv_raspberry_test.server.Services
         }
         public override async Task SayHello(HelloRequest request, IServerStreamWriter<HelloReply> responseStream, ServerCallContext context)
         {
+            await speedService.GetStartupCall();
+
             while (!context.CancellationToken.IsCancellationRequested)
             {
                 logger.LogInformation("next");

@@ -9,7 +9,7 @@
     <Grid>
 
         <StackPanel Margin="80">
-            
+            <Button Content="Start" Click="Button_Click"/>
             <Slider Value="{Binding Frequence}"  Maximum="360" Minimum="1" />
         </StackPanel>
 

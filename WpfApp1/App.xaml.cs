@@ -18,7 +18,7 @@ namespace WpfApp1
             var host = Host.CreateDefaultBuilder(e.Args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseUrls("https://localhost:5001");
+                    webBuilder.UseUrls("https://10.0.0.11:5001");
                     webBuilder.UseStartup<Startup>();
                 }).Build();
 
