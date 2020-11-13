@@ -21,18 +21,18 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly SpeedService speedService;
+        private readonly SpeedService _speedService;
 
         public MainWindow(SpeedService speedService)
         {
             DataContext = speedService;
             InitializeComponent();
-            this.speedService = speedService;
+            _speedService = speedService;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            speedService.Start();
+            _speedService.Start();
         }
     }
 }
